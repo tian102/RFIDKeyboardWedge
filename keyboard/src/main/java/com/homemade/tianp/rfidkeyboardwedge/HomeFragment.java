@@ -1,3 +1,13 @@
+/**
+ * Fragment class used for home section of application UI
+ *
+ * @author  Tian Pretorius
+ * @version 1.0
+ * @since   2017-03-15
+ *
+ * Created by tianp on 24 Mar 2017.
+ */
+
 package com.homemade.tianp.rfidkeyboardwedge;
 
 import android.content.Context;

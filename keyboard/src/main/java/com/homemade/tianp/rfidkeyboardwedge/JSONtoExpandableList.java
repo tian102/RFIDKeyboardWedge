@@ -1,3 +1,13 @@
+/**
+ * Class to convert JSON scan result to android ExpandableListView
+ *
+ * @author  Tian Pretorius
+ * @version 1.0
+ * @since   2017-03-15
+ *
+ * Created by tianp on 24 Mar 2017.
+ */
+
 package com.homemade.tianp.rfidkeyboardwedge;
 
 import org.json.JSONArray;
@@ -11,6 +21,12 @@ import java.util.List;
 import java.util.Map;
 
 public class JSONtoExpandableList {
+    /**
+     *
+     * @param jsonTaglist scanned tag list in JSONObject format
+     * @return JSONObject in HashMap<String, List<String>> format
+     * @throws JSONException
+     */
     public static HashMap<String, List<String>> getData(JSONObject jsonTaglist) throws JSONException {
         HashMap<String, List<String>> expandableListDetail = new HashMap<String, List<String>>();
 
@@ -38,8 +54,8 @@ public class JSONtoExpandableList {
     }
 
 
-
-    /*TODO: Needs to be fixed*/
+/*
+    *//*TODO: Needs to be fixed*//*
     public static HashMap<String, List<String>> getMultiTagData(JSONObject jsonTaglist) throws JSONException {
         HashMap<String, List<String>> expandableListDetail = new HashMap<String, List<String>>();
         String key = "";
@@ -69,8 +85,14 @@ public class JSONtoExpandableList {
 //        valueArr.add((HashMap<String,String>)currentKey.getValue());
 
         return expandableListDetail;
-    }
+    }*/
 
+    /**
+     * Converts single dimensional JSONObject to basic HashMap
+     * @param json JSONObject to convert
+     * @return Map<String, Object>
+     * @throws JSONException
+     */
     public static Map<String, Object> jsonToMap(JSONObject json) throws JSONException {
         Map<String, Object> retMap = new HashMap<String, Object>();
 
@@ -79,7 +101,12 @@ public class JSONtoExpandableList {
         }
         return retMap;
     }
-
+    /**
+     * Converts multi-dimensional JSONObject to basic HashMap
+     * @param object JSONObject to convert
+     * @return Map<String, Object>
+     * @throws JSONException
+     */
     public static Map<String, Object> toMap(JSONObject object) throws JSONException {
         Map<String, Object> map = new HashMap<String, Object>();
 
@@ -99,7 +126,12 @@ public class JSONtoExpandableList {
         }
         return map;
     }
-
+    /**
+     * Converts JSONObject to ArrayList<>
+     * @param array JSONArray to convert
+     * @return List<Object>
+     * @throws JSONException
+     */
     public static List<Object> toList(JSONArray array) throws JSONException {
         List<Object> list = new ArrayList<Object>();
         for(int i = 0; i < array.length(); i++) {

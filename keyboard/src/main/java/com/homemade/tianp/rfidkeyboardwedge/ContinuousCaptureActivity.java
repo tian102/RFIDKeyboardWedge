@@ -1,4 +1,12 @@
-
+/**
+ * Activity for scanning multiple barcodes at a time.
+ *
+ * @author  Tian Pretorius
+ * @version 1.0
+ * @since   2017-03-15
+ *
+ * Created by tianp on 24 Mar 2017.
+ */
 package com.homemade.tianp.rfidkeyboardwedge;
 
 import android.app.Activity;
@@ -15,14 +23,6 @@ import com.journeyapps.barcodescanner.DecoratedBarcodeView;
 
 import java.util.List;
 
-/**Handles the scanning of 1D and 2D barcodes.
- *
- * @author  Tian Pretorius
- * @version 1.0
- * @since   2017-03-15
- *
- * Created by tianp on 24 Mar 2017.
- */
 
 public class ContinuousCaptureActivity extends Activity {
 
@@ -31,7 +31,12 @@ public class ContinuousCaptureActivity extends Activity {
     private BeepManager beepManager;
     private String lastText;
 
+
+
     private BarcodeCallback callback = new BarcodeCallback() {
+        /**
+         * @param result barcode scan result
+         */
         @Override
         public void barcodeResult(BarcodeResult result) {
             if(result.getText() == null){
@@ -104,6 +109,7 @@ public class ContinuousCaptureActivity extends Activity {
     public void triggerScan(View view) {
         barcodeView.decodeSingle(callback);
     }
+
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {

@@ -1,3 +1,13 @@
+/**
+ * Fragment class used for RFID section of application UI
+ *
+ * @author  Tian Pretorius
+ * @version 1.0
+ * @since   2017-03-15
+ *
+ * Created by tianp on 24 Mar 2017.
+ */
+
 package com.homemade.tianp.rfidkeyboardwedge;
 
 import android.content.Context;
@@ -119,10 +129,7 @@ public class RFIDFragment extends Fragment {
 
 
     private void setupViews() {
-//        String url = "www.google.com";
-//        WebView webView = (WebView) getActivity().findViewById(R.id.webView);
-//
-//        loadHTML(webView);
+
 
     }
 

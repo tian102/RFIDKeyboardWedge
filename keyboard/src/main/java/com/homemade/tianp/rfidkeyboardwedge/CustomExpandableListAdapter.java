@@ -1,3 +1,13 @@
+/**
+ * Adapter class to arrange multiple tags into specific order for display in {@link com.homemade.tianp.rfidkeyboardwedge.JSONtoExpandableList}
+ *
+ * @author  Tian Pretorius
+ * @version 1.0
+ * @since   2017-03-15
+ *
+ * Created by tianp on 24 Mar 2017.
+ */
+
 package com.homemade.tianp.rfidkeyboardwedge;
 
 import java.util.HashMap;

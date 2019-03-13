@@ -1,3 +1,13 @@
+/**
+ * Class for storing and handling scanned tag data
+ *
+ * @author  Tian Pretorius
+ * @version 1.0
+ * @since   2017-03-15
+ *
+ * Created by tianp on 24 Mar 2017.
+ */
+
 package com.homemade.tianp.rfidkeyboardwedge;
 
 import android.app.Dialog;
@@ -26,43 +36,85 @@ public class LastScannedTags {
 
     /*Getters & Setters*/
 
+    /**
+     *
+     * @return Last scanned ATA Tag in HashMap format
+     */
     public static HashMap<String, String> getmAtaTag() {
         return mAtaTag;
     }
+
+    /**
+     *
+     * @return Last scanned ATA Tag in JSON format
+     */
     public static JSONObject getmAtaTag_JSON() {
         return getTagJSON(mAtaTag);
     }
 
+    /**
+     *
+     * @param mAtaTag Scanned ATA tag in HashMap<String, String> format
+     */
     public static void setmAtaTag(HashMap<String, String> mAtaTag) {
         LastScannedTags.mAtaTag = mAtaTag;
     }
 
+    /**
+     *
+     * @return Last Gen2 tag scanned in HashMap<String,String> format
+     */
     public static HashMap<String, String> getmGen2Tag() {
         return mGen2Tag;
     }
 
+    /**
+     *
+     * @return Last Gen2 tag scanned in JSON format
+     */
     public static JSONObject getmGen2Tag_JSON() {
         return getTagJSON(mGen2Tag);
     }
 
+    /**
+     *
+     * @param mGen2Tag Scanned GEN2 tag in HashMap<String, String> format
+     */
     public static void setmGen2Tag(HashMap<String, String> mGen2Tag) {
         LastScannedTags.mGen2Tag = mGen2Tag;
     }
 
+    /**
+     *
+     * @return Last scanned GEN2 tag list
+     */
     public static HashMap<String, List<String>> getmGen2Tags() {
         return mGen2Tags;
     }
 
+    /**
+     *
+     * @return
+     */
     public static JSONObject getmGen2Tags_JSON() {
         return getMultiTagJSON(mGen2Tags);
     }
 
+    /**
+     *
+     * @param mGen2Tags List of scanned GEN2 tags
+     */
     public static void setmGen2Tags(HashMap<String, List<String>> mGen2Tags) {
         LastScannedTags.mGen2Tags = mGen2Tags;
     }
 
     /*Additional functions*/
 
+    /**
+     * Converts hashmap format of tag to JSONObject
+     * @param hashMap
+     * @return
+     */
     public static JSONObject getTagJSON(HashMap<String, String> hashMap){
         JSONObject jsonChild = null;
         JSONObject mainObject = null;
@@ -92,6 +144,11 @@ public class LastScannedTags {
 
     }
 
+    /**
+     * Converts hashmap format of list of tags to JSONObject
+     * @param hashMap
+     * @return
+     */
     public static JSONObject getMultiTagJSON(HashMap<String, List<String>> hashMap){
         JSONObject jsonChild = null;
         JSONObject mainObject = null;
@@ -111,6 +168,11 @@ public class LastScannedTags {
 
     }
 
+    /**
+     * Converts JSONObject to HashMap format
+     * @param jObject
+     * @return
+     */
     public static HashMap<String, String> jsonToHashmap(JSONObject jObject){
 
         HashMap<String, String> mainObject = null;
@@ -120,6 +182,13 @@ public class LastScannedTags {
 
     }
 
+    /**
+     * Display pop-up dialog with single tag scan results
+     * @param rfidKeyboardWedge1 Instance of keyboard in use (for Context)
+     * @param inputView1 Current view in use
+     * @param tagInformation1 Scanned tag result
+     * @throws JSONException
+     */
     public static void displayScannedTagDialog(final RFIDKeyboardWedge rfidKeyboardWedge1, final View inputView1, HashMap<String, String> tagInformation1) throws JSONException {
         ExpandableListView expandableListView;
         ExpandableListAdapter expandableListAdapter;
@@ -224,7 +293,13 @@ public class LastScannedTags {
             dialog.show();
         }
     }
-
+    /**
+     * Display pop-up dialog with multiple tags scan results
+     * @param rfidKeyboardWedge1 Instance of keyboard in use (for Context)
+     * @param inputView1 Current view in use
+     * @param tagInformation1 Scanned tag result
+     * @throws JSONException
+     */
     public static void displayScannedTagsDialog(final RFIDKeyboardWedge rfidKeyboardWedge1, final View inputView1, HashMap<String, List<String>> tagInformation1) throws JSONException {
         ExpandableListView expandableListView;
         ExpandableListAdapter expandableListAdapter;
@@ -342,6 +417,4 @@ public class LastScannedTags {
             dialog.show();
         }
     }
-
-
 }

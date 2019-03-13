@@ -1,3 +1,14 @@
+/**
+ * Base class of application
+ *
+ * @author  Tian Pretorius
+ * @version 1.0
+ * @since   2017-03-15
+ *
+ * Created by tianp on 24 Mar 2017.
+ */
+
+
 package com.homemade.tianp.rfidkeyboardwedge;
 
 import android.content.ComponentName;
@@ -34,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
     public static Fragment settingsFragment=null;
     private static String currentFragment = "";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +61,11 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
     private void setupCreate(){
 
     }
+
+
+    /**
+     * Initialize startup views
+     */
     private void setupViews(){
         navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -58,13 +75,18 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
         mTextMessage = findViewById(R.id.mText);
     }
 
+
+    /**
+     * Initialize startup navigation
+     */
     private void setupStart(){
         navigation.setSelectedItemId(R.id.navigation_home);
     }
 
 
-
-
+    /**
+     * BottomNavigation handler
+     */
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -118,6 +140,11 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
         }
     };
 
+    /**
+     * Used to navigate to selected fragment in BottomNavigation
+     * @param id Fragment id
+     * @param FRAGMENT_TAG Fragment tag name
+     */
     private void navigateToFragment(int id, String FRAGMENT_TAG){
 
         int page = 0;
@@ -235,6 +262,12 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 
     }
 
+    /**
+     * @deprecated Navigate via swipes
+     * @param velocityX
+     * @param velocityY
+     * @return
+     */
     private int determineDirection(float velocityX, float velocityY){
         int direction = -1;
         if(velocityX < 0 && Math.abs(velocityX) > Math.abs(velocityY) ){
@@ -270,6 +303,10 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
         }
     }
 
+    /**
+     * Open 3rd party application (CrossBorder
+     * @param view Get Context
+     */
     public void openCrossborder(View view) {
         String packageName = getString(R.string.CrossBorderApp_PackageName);
         Intent intent = getApplication().getPackageManager().getLaunchIntentForPackage(packageName);
@@ -283,6 +320,10 @@ public class MainActivity extends AppCompatActivity implements HomeFragment.OnFr
 
     }
 
+    /**
+     * Open 3rd party application (Transnet Freight Rail)
+     * @param view Get Context
+     */
     public void openTFR(View view) {
         String packageName = getString(R.string.TransnetApp_PackageName);
         Intent intent = getApplication().getPackageManager().getLaunchIntentForPackage(packageName);

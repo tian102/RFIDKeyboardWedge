@@ -1,4 +1,12 @@
-
+/**
+ * Handles the scanning of single 1D and 2D barcodes.
+ *
+ * @author  Tian Pretorius
+ * @version 1.0
+ * @since   2017-03-15
+ *
+ * Created by tianp on 24 Mar 2017.
+ */
 package com.homemade.tianp.rfidkeyboardwedge;
 
 import android.content.Context;
@@ -14,14 +22,6 @@ import com.google.zxing.integration.android.IntentResult;
 import com.homemade.tianp.rfidkeyboardwedge.R;
 import com.homemade.tianp.rfidkeyboardwedge.ScanResult;
 
-/**Handles the scanning of 1D and 2D barcodes.
- *
- * @author  Tian Pretorius
- * @version 1.0
- * @since   2017-03-15
- *
- * Created by tianp on 24 Mar 2017.
- */
 
 /**
  * Handles the scanning of 1D and 2D barcodes.
@@ -30,7 +30,6 @@ import com.homemade.tianp.rfidkeyboardwedge.ScanResult;
  * Starts barcode scanner intent. Scan result, if valid, gets returned to the main UI
  * </p>
  *
- * @author Tianp
  */
 
 public class BarcodeScanner extends AppCompatActivity {
@@ -42,8 +41,8 @@ public class BarcodeScanner extends AppCompatActivity {
         StartBarcodeScanner();
     }
 
-    /**Set up the scanner
-     *
+    /**
+     * Initiate barcode scanner
      */
     public void StartBarcodeScanner(){
         IntentIntegrator integrator = new IntentIntegrator(this);
@@ -57,9 +56,9 @@ public class BarcodeScanner extends AppCompatActivity {
     }
 
     /**Handles result of barcode scan
-     * @param requestCode
-     * @param resultCode
-     * @param data
+     * @param requestCode request code from {@code onActivityResult()}
+     * @param resultCode  result code from {@code onActivityResult()}
+     * @param data {@link Intent} from {@code onActivityResult()}
      */
 
     @Override
