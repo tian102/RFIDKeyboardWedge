@@ -1,3 +1,7 @@
+/**
+ * Manage app and reader settings
+ */
+
 package com.homemade.tianp.rfidkeyboardwedge;
 
 import android.app.FragmentTransaction;

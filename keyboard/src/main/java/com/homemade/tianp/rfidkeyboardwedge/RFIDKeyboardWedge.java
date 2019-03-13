@@ -1,3 +1,7 @@
+/**
+ * Main keyboard wedge class handling all keyboard functions in application
+ */
+
 package com.homemade.tianp.rfidkeyboardwedge;
 
 import android.app.Activity;
@@ -76,7 +80,7 @@ public class RFIDKeyboardWedge extends InputMethodService
     /** shiftCaps
      *
      * @param shiftCaps     State 0: Caps = false (Shift unpressed)
-     *                      State 1: Caps = true (Shift pressed once)   (Revert to State 0 if any
+     *                      State 1: Caps = true (Shift pressed once)   (Reverts to State 0 if any
      *                                                                   other key instead of shift
      *                                                                   is pressed)
      *                      State 2: Caps = true (Caps lock is on)
@@ -119,6 +123,11 @@ public class RFIDKeyboardWedge extends InputMethodService
         return super.onKeyDown(keyCode, event);
     }
 
+    /**
+     * Keypress handler
+     * @param primaryCode
+     * @param keyCodes
+     */
     @Override
     public void onKey(int primaryCode, int[] keyCodes) {
 
@@ -243,6 +252,9 @@ public class RFIDKeyboardWedge extends InputMethodService
         }
     }
 
+    /**
+     * Reopens tag scan result dialog
+     */
     private void openPreviousTagDialog() {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -307,14 +319,17 @@ public class RFIDKeyboardWedge extends InputMethodService
         return reader != null;
     }
 
-    /** Used to choose between layouts e.g. Alphabet and Symbols*/
+    /**
+     * Used to choose between layouts e.g. Alphabet and Symbols
+     */
     private void createKeyboard(){
         createKeyboardLayout();
         this.setInputView(mInputView);
     }
 
-    /** Used only to set keyboard at first launch
-     * */
+    /**
+     * Used only to set keyboard at first launch
+     */
     private View createKeyboard1(){
         createKeyboardLayout();
         return kv;
@@ -362,6 +377,9 @@ public class RFIDKeyboardWedge extends InputMethodService
         startActivity(intent);
     }
 
+    /**
+     * Initiate RFID tag scan
+     */
     public void scanRFID(){
 
         if(getConnectedReader() != null){
@@ -458,7 +476,9 @@ public class RFIDKeyboardWedge extends InputMethodService
     }
 
 
-
+    /**
+     * Connect to bluetooth reader
+     */
     public void connectToBTReader(){
         if(reader != null){
             //ServiceListenerRFID.stopReadTagThread();
@@ -487,27 +507,27 @@ public class RFIDKeyboardWedge extends InputMethodService
     * TODO: #1 - Fix Start Reading Tag on single mode ReadSingleGen2Tag*/
     public void alterKeyboard(Keyboard keyboard){
         checkKeyboard(keyboard);
-//        List<Keyboard.Key> keys = null;
-//        if (keyboard != null) {
-//            keys = keyboard.getKeys();
-//        }
-//
-//        if (keys != null) {
-//            for (Keyboard.Key key : keys) {
-//                if (key.codes[0] == 213){
-//                    readRFIDkey = key;
-//                }
-//                else if (key.codes[0] == 215) {
-//                    if (reader != null || FragmentMethods.getBluetoothStatus(this,mInputView) != null || getConnectedReader() != null){
-//                        key.icon = getResources().getDrawable(R.drawable.ic_devices_green_24dp);
-//                        readRFIDkey.label = "Start Reading";
-//                    }else{
-//                        readRFIDkey.label = "RFID";
-//                        key.icon = getResources().getDrawable(R.drawable.ic_devices_white_24dp);
-//                    }
-//                }
-//            }
-//        }
+/*        List<Keyboard.Key> keys = null;
+        if (keyboard != null) {
+            keys = keyboard.getKeys();
+        }
+
+        if (keys != null) {
+            for (Keyboard.Key key : keys) {
+                if (key.codes[0] == 213){
+                    readRFIDkey = key;
+                }
+                else if (key.codes[0] == 215) {
+                    if (reader != null || FragmentMethods.getBluetoothStatus(this,mInputView) != null || getConnectedReader() != null){
+                        key.icon = getResources().getDrawable(R.drawable.ic_devices_green_24dp);
+                        readRFIDkey.label = "Start Reading";
+                    }else{
+                        readRFIDkey.label = "RFID";
+                        key.icon = getResources().getDrawable(R.drawable.ic_devices_white_24dp);
+                    }
+                }
+            }
+        }*/
     }
     private static Keyboard.Key findKey(Keyboard keyboard, int primaryCode) {
         for (Keyboard.Key key : keyboard.getKeys()) {
@@ -571,8 +591,10 @@ public class RFIDKeyboardWedge extends InputMethodService
     }
 
 
-    /** Prints string to screen
-     * */
+    /**
+     * Prints string to screen
+     * @param string String that needs to be printed
+     */
     public static void StringToWedge(String string){
         for(int i = 0; i < string.length(); i++){
             ToScreen(string.charAt(i));
@@ -580,15 +602,18 @@ public class RFIDKeyboardWedge extends InputMethodService
         }
     }
 
-    /** Prints character to screen
-     * */
+    /**
+     * Prints character to screen
+     * @param code char code of chars in string
+     */
     public static void ToScreen(char code){
         //sendKeyChar(code);
         inputConnection.commitText(String.valueOf(code),1);
     }
 
-    /**Keyboard sound effects
-     * */
+    /**
+     * Keyboard sound effects
+     */
     private void playClick(int keyCode){
         AudioManager audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
         switch (keyCode){
@@ -606,8 +631,9 @@ public class RFIDKeyboardWedge extends InputMethodService
         }
     }
 
-    /** Start the barcode scanner
-     * */
+    /**
+     * Start the barcode scanner
+     */
     private void barcodeScanButton(){
 
         Intent intent = new Intent(RFIDKeyboardWedge.this, BarcodeScanner.class);
@@ -619,8 +645,9 @@ public class RFIDKeyboardWedge extends InputMethodService
 
 
 
-    /** Start the 'multiple barcodes' scanner
-     * */
+    /**
+     * Start the 'multiple barcodes' scanner
+     */
     private void continuousCaptureButton(){
         Intent intent = new Intent(this, ContinuousCaptureActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -629,8 +656,9 @@ public class RFIDKeyboardWedge extends InputMethodService
 
     }
 
-    /** Start the tag scanner
-     * */
+    /**
+     * Start the tag scanner
+     */
     private void tagScanButton(){
         Intent intent = new Intent(this, NFCTagScanner.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -641,8 +669,9 @@ public class RFIDKeyboardWedge extends InputMethodService
         Toast.makeText(this, ScanResult.GetProductID(), Toast.LENGTH_SHORT).show();
     }
 
-    /** Clear scan result
-     * */
+    /**
+     * Clear scan result
+     */
     private void clearID(){
         ScanResult.resetAll();
     }

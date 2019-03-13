@@ -1,3 +1,6 @@
+/**.
+ * @deprecated
+ */
 package com.homemade.tianp.rfidkeyboardwedge.tools;
 
 import com.thingmagic.TagReadData;

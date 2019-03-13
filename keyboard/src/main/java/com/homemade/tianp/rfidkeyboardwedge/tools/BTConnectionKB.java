@@ -1,3 +1,6 @@
+/**
+ * Bluetooth connection class for android
+ */
 package com.homemade.tianp.rfidkeyboardwedge.tools;
 
 import android.app.ProgressDialog;
