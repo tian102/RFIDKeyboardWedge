@@ -23,6 +23,16 @@ import com.homemade.tianp.rfidkeyboardwedge.ScanResult;
  * Created by tianp on 24 Mar 2017.
  */
 
+/**
+ * Handles the scanning of 1D and 2D barcodes.
+ *
+ * <p>
+ * Starts barcode scanner intent. Scan result, if valid, gets returned to the main UI
+ * </p>
+ *
+ * @author Tianp
+ */
+
 public class BarcodeScanner extends AppCompatActivity {
 
     @Override
@@ -33,7 +43,8 @@ public class BarcodeScanner extends AppCompatActivity {
     }
 
     /**Set up the scanner
-     * */
+     *
+     */
     public void StartBarcodeScanner(){
         IntentIntegrator integrator = new IntentIntegrator(this);
         integrator.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES);
