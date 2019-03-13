@@ -1,0 +1,46 @@
+<PreferenceScreen xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="about_rfid_engine"
+        android:title="RFID Engine"
+        android:selectable="false">
+
+    </EditTextPreference>
+
+    <EditTextPreference
+        android:key="about_firmware_version"
+        android:title="Firmware version"
+        android:selectable="false">
+
+    </EditTextPreference>
+
+    <EditTextPreference
+        android:key="about_hardware_version"
+        android:title="Hardware version"
+        android:selectable="false">
+
+    </EditTextPreference>
+
+    <EditTextPreference
+        android:key="about_reader_serial"
+        android:title="Reader Serial number"
+        android:selectable="false">
+
+    </EditTextPreference>
+
+    <EditTextPreference
+        android:key="about_supported_protocols"
+        android:title="Supported Protocols"
+        android:selectable="false">
+
+    </EditTextPreference>
+
+    <EditTextPreference
+        android:key="about_app_version"
+        android:title="App version"
+        android:selectable="false">
+
+    </EditTextPreference>
+
+</PreferenceScreen>

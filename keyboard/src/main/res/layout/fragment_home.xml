@@ -1,0 +1,183 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/homeFragment"
+    tools:context="com.homemade.tianp.rfidkeyboardwedge.HomeFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20dp"
+    >
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Welcome to KBW Keyboard"
+            android:onClick="openThingMagic"
+            android:textColor="@color/zxing_status_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+
+            />
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="20dp"
+    android:text="-------------------------------------------------------\nKeyboard Setup:\n\nTo be able to use the KBW Keyboard, the keyboard has to be enabled.\n\nTo enable the keyboard press the  ENABLE KEYBOARD button and select KBW Keyboard"
+    android:textColor="@color/zxing_status_text"
+    android:textSize="18sp" />
+
+    <ImageView
+    android:layout_width="216dp"
+    android:layout_height="359dp"
+    android:background="@drawable/enable_keyboard"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_gravity="center"/>
+
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Enable Keyboard"
+    android:layout_marginTop="20dp"
+    android:layout_gravity="center"
+    android:onClick="openSettings"/>
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:text="Next:\n[Go to Settings>Language and Input\nand select the Default keyboard setting]"
+    android:textColor="@color/zxing_status_text"
+    android:textSize="18sp" />
+
+    <ImageView
+    android:layout_width="216dp"
+    android:layout_height="359dp"
+    android:background="@drawable/default_keyboard"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_gravity="center"/>
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="20dp"
+    android:text="Select 'Default keyboard'"
+    android:textColor="@color/zxing_status_text"
+    android:textSize="18sp" />
+
+    <ImageView
+    android:layout_width="216dp"
+    android:layout_height="359dp"
+    android:background="@drawable/choose_default_keyboard"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_gravity="center"/>
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="10dp"
+    android:text="Select 'KBW Keyboard'"
+    android:textColor="@color/zxing_status_text"
+    android:textSize="18sp" />
+
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Settings"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="20dp"
+    android:layout_gravity="center"
+    android:onClick="setDefaultKeyboard"/>
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="10dp"
+    android:text="-------------------------------------------------------\nInterface:\n\nTo access KBW keyboard scan functions"
+    android:textColor="@color/zxing_status_text"
+    android:textSize="18sp" />
+
+    <ImageView
+    android:layout_width="216dp"
+    android:layout_height="359dp"
+    android:background="@drawable/qwerty_layout"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_gravity="center"/>
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="10dp"
+    android:text="Select 'Scan' on the bottom left of the keyboard"
+    android:textColor="@color/zxing_status_text"
+    android:textSize="18sp" />
+
+    <ImageView
+    android:layout_width="216dp"
+    android:layout_height="359dp"
+    android:background="@drawable/scan_layout"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_gravity="center"/>
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="20dp"
+    android:text="Select Barcode or Tag to scan\nSelect 'Print' to display result"
+    android:textColor="@color/zxing_status_text"
+    android:textSize="18sp" />
+
+
+    </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>

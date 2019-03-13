@@ -1,0 +1,124 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceCategory
+    android:title="Reader Settings">
+
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/readMode"
+        android:entryValues="@array/readModeValues"
+        android:key="list_readmode"
+        android:negativeButtonText="Cancel"
+        android:positiveButtonText="Accept"
+        android:title="Read mode" />
+
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/antenna"
+        android:entryValues="@array/antennaValues"
+        android:key="list_antenna"
+        android:negativeButtonText="Cancel"
+        android:positiveButtonText="Accept"
+        android:title="Antenna Selection" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="switch_protocol"
+        android:summaryOff="Disabled"
+        android:summaryOn="Enabled"
+        android:title="Multi-protocol scanning" />
+
+
+    <EditTextPreference
+        android:dependency="switch_protocol"
+        android:key="edittext_protocol"
+        android:selectAllOnFocus="true"
+        android:singleLine="false"
+        android:hint="E.g. C1D12EFC01C1D12EF270A53B0A53BC01;0A53..."
+        android:title="Other Protocols"
+        android:dialogTitle="Enter License keys"/>
+
+
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/pref_region"
+        android:entryValues="@array/pref_region_values"
+        android:key="list_region"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/title_region" />
+
+    <EditTextPreference
+        android:id="@+id/pref_1_TimeOut_EditTextPreference"
+        android:defaultValue="Default value"
+        android:dialogTitle="Timeout in milliseconds"
+        android:inputType="number"
+        android:key="edittext_timeout"
+        android:negativeButtonText="Cancel"
+        android:positiveButtonText="Accept"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="1000"
+        android:title="Time out" />
+
+    <EditTextPreference
+        android:id="@+id/edittext_dutycycle_time_on"
+        android:defaultValue="1000"
+        android:inputType="number"
+        android:dialogTitle="Time on (ms)"
+        android:key="edittext_dutycycle_time_on"
+        android:negativeButtonText="Cancel"
+        android:positiveButtonText="Accept"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Duty Cycle (Time on)" />
+
+    <EditTextPreference
+        android:id="@+id/edittext_dutycycle_time_off"
+        android:defaultValue="0"
+        android:inputType="number"
+        android:dialogTitle="Time off (ms)"
+        android:key="edittext_dutycycle_time_off"
+        android:negativeButtonText="Cancel"
+        android:positiveButtonText="Accept"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Duty Cycle (Time off)" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Data Settings">
+
+
+        <EditTextPreference
+            android:id="@+id/edittext_tag_delimiter_id"
+            android:defaultValue=";"
+            android:dialogTitle="Delimiter"
+            android:hint='Eg. ";", "|", "-"'
+            android:key="edittext_tag_delimiter"
+            android:negativeButtonText="Cancel"
+            android:positiveButtonText="Accept"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Multiple tag delimeter" />
+
+        <!--<MultiSelectListPreference-->
+            <!--android:dialogTitle="Select Data to Read"-->
+            <!--android:key="multiselectlist_read_data"-->
+            <!--android:summary="Select the data to ReadSingleGen2Tag when scanning"-->
+            <!--android:title="Embedded Data Read"-->
+            <!--android:entries="@array/pref_read_data"-->
+            <!--android:entryValues="@array/pref_read_data_values"-->
+            <!--android:defaultValue="@array/pref_read_data_default_values"-->
+            <!--/>-->
+
+        <ListPreference
+            android:defaultValue="@array/pref_read_data_default_values"
+            android:entries="@array/pref_read_data"
+            android:entryValues="@array/pref_read_data_values"
+            android:key="list_read_data"
+            android:negativeButtonText="Cancel"
+            android:positiveButtonText="Accept"
+            android:title="Select Data to Read" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

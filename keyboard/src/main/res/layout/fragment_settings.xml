@@ -1,0 +1,192 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/notificationFragment"
+    tools:context="com.homemade.tianp.rfidkeyboardwedge.SettingsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/settingsReadWrite"
+                android:layout_marginTop="4dp"
+                android:padding="5dp"
+                android:weightSum="1"
+                android:background="@color/tabGrey">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_keyboard_black_48dp"
+                    android:layout_weight="0.2"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Reader Settings"
+                    android:layout_weight="0.8"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/zxing_status_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/settingsPerformanceTuning"
+                android:layout_marginTop="4dp"
+                android:padding="5dp"
+                android:weightSum="1"
+                android:background="@color/tabGrey">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_font_download_black_48dp"
+                    android:layout_weight="0.2"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Performance Tuning"
+                    android:layout_weight="0.8"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/zxing_status_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/settingsDisplayOptions"
+                android:layout_marginTop="4dp"
+                android:padding="5dp"
+                android:weightSum="1"
+                android:background="@color/tabGrey">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_reorder_black_48dp"
+                    android:layout_weight="0.2"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Display Options"
+                    android:layout_weight="0.8"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/zxing_status_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/settingsProfile"
+                android:layout_marginTop="4dp"
+                android:padding="5dp"
+                android:weightSum="1"
+                android:background="@color/tabGrey"
+                android:visibility="gone">
+                <!--change to display settings-->
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_featured_video_black_48dp"
+                    android:layout_weight="0.2"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Profile"
+                    android:layout_weight="0.8"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/zxing_status_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/settingsFirmware"
+                android:layout_marginTop="4dp"
+                android:padding="5dp"
+                android:weightSum="1"
+                android:background="@color/tabGrey">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_data_usage_black_48dp"
+                    android:layout_weight="0.2"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Firmware"
+                    android:layout_weight="0.8"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/zxing_status_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/settingsAbout"
+                android:layout_marginTop="4dp"
+                android:padding="5dp"
+                android:weightSum="1"
+                android:background="@color/tabGrey">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_info_outline_black_48dp"
+                    android:layout_weight="0.2"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="About"
+                    android:layout_weight="0.8"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/zxing_status_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="4dp"
+                android:padding="5dp"
+                android:weightSum="1"
+                android:background="@color/tabGrey">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Test:"
+                    android:layout_weight="0.2"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/zxing_status_text"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/zxing_status_text"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

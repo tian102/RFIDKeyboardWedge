@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RFIDKeyboardWedge.iml" filepath="$PROJECT_DIR$/RFIDKeyboardWedge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/keyboard/keyboard.iml" filepath="$PROJECT_DIR$/keyboard/keyboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mylibrary/mylibrary.iml" filepath="$PROJECT_DIR$/mylibrary/mylibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thingmagic/thingmagic.iml" filepath="$PROJECT_DIR$/thingmagic/thingmagic.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,41 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Display Options">
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/tagResultColumn"
+            android:entryValues="@array/tagResultColumnValues"
+            android:key="list_tagResultColumn"
+            android:negativeButtonText="Cancel"
+            android:positiveButtonText="Accept"
+            android:title="Tag Result Column" />
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/timestampFormat"
+            android:entryValues="@array/timestampFormatValues"
+            android:key="list_timestampFormat"
+            android:negativeButtonText="Cancel"
+            android:positiveButtonText="Accept"
+            android:title="TimeStamp Format" />
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/bigNumSelection"
+            android:entryValues="@array/bigNumSelectionValues"
+            android:key="list_bigNumSelection"
+            android:negativeButtonText="Cancel"
+            android:positiveButtonText="Accept"
+            android:title="Big Num Selection" />
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/epcFormat"
+            android:entryValues="@array/epcFormatValues"
+            android:key="list_epcFormat"
+            android:negativeButtonText="Cancel"
+            android:positiveButtonText="Accept"
+            android:title="EPC Format" />
+
+    </PreferenceCategory>
+    
+
+</PreferenceScreen>

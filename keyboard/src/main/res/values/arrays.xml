@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="readMode" >
+        <item>(Gen2) Sync</item>
+        <item>(Gen2) Async </item>
+        <item>(ATA) Sync</item>
+    </string-array>
+
+    <string-array name="readModeValues" >
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="antenna" >
+        <item>1</item>
+        <item>2</item>
+        <item>1,2</item>
+    </string-array>
+
+    <string-array name="antennaValues" >
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+
+    <string-array name="tagResultColumn" >
+        <item>Antenna</item>
+        <item>Phase</item>
+        <item>Frequency</item>
+        <item>Protocol</item>
+    </string-array>
+
+    <string-array name="tagResultColumnValues" >
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+
+    <string-array name="timestampFormat" >
+        <item>DD/MM/YYY</item>
+        <item>MM/DD/YYY</item>
+        <item>YYY/DD/MM</item>
+    </string-array>
+
+    <string-array name="timestampFormatValues" >
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+
+    <string-array name="bigNumSelection" >
+        <item>Remove Big Num</item>
+        <item>Unique Tag Count</item>
+        <item>Total Tag Count</item>
+        <item>Summary of Tag Result</item>
+    </string-array>
+
+    <string-array name="bigNumSelectionValues" >
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+
+    <string-array name="epcFormat" >
+        <item>ASCII</item>
+        <item>Hex</item>
+        <item>ReverseBase36</item>
+    </string-array>
+
+    <string-array name="epcFormatValues" >
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+
+    <string-array name="upgradeType" >
+        <item>Firmware</item>
+        <item>License</item>
+    </string-array>
+
+    <string-array name="upgradeTypeValues" >
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="empty_array" />
+</resources>

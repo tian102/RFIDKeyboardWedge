@@ -1,0 +1,286 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dashboardFragment"
+    tools:context="com.homemade.tianp.rfidkeyboardwedge.RFIDFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sample use cases"
+            android:gravity="center"/>
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_launcher_web"
+            android:onClick="openCrossborder"
+            android:layout_margin="50dp"/>
+        
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/tfr_icon"
+            android:onClick="openTFR"
+            android:layout_margin="50dp"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+    <!--&lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:weightSum="1">-->
+
+            <!--<WebView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/webView"-->
+                <!--&gt;-->
+
+            <!--</WebView>-->
+
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="Device Preference"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_margin="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="@color/zxing_status_text"/>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="4dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@color/tabGrey">&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_margin="10dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Bluetooth Device"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textAllCaps="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/zxing_status_text"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textStyle="bold" />&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_weight="0.7"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:text="Select the Bluetooth Rfid Reader device to use as input. The device must already be paired in the Android Bluetooth Settings"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_margin="10dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textColor="@color/zxing_status_text"/>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+            <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="Scanning Behaviour"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_margin="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="@color/zxing_status_text"/>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="4dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@color/tabGrey">&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_margin="10dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Continuous Scanning"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textAllCaps="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/zxing_status_text"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textStyle="bold" />&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:weightSum="1"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:orientation="horizontal">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_weight="0.7"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:text="Enable continuous scanning of RFID tags until a period of inactivity"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_margin="10dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textColor="@color/zxing_status_text"/>&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_weight="0.3">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<CheckBox&ndash;&gt;-->
+                            <!--&lt;!&ndash;android:id="@+id/checkbox"&ndash;&gt;-->
+                            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                            <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+                            <!--&lt;!&ndash;android:layout_margin="2dp"&ndash;&gt;-->
+                            <!--&lt;!&ndash;android:scaleX="2"&ndash;&gt;-->
+                            <!--&lt;!&ndash;android:scaleY="2"/>&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+            <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="4dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@color/tabGrey">&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_margin="10dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Duplicate Scan Elimination"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textAllCaps="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/zxing_status_text"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textStyle="bold" />&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:weightSum="1"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:orientation="horizontal">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_weight="0.7"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:text="Number of seconds to prevent the device from scanning duplicate tags while in continuous scan mode"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_margin="10dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textColor="@color/zxing_status_text"/>&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<Spinner&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/spinner2"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_margin="10dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_weight="0.3" />&ndash;&gt;-->
+                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+            <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+
+            <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="4dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@color/tabGrey">&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_margin="10dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Scan Pre-Text"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textAllCaps="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/zxing_status_text"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textStyle="bold" />&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:weightSum="1"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:orientation="horizontal">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_weight="0.7"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:text="Text to be inserted before scanned tag ID. Use [n] or [t] for a new line or a tab character"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_margin="10dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textColor="@color/zxing_status_text"/>&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<Spinner&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/spinner3"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_margin="10dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_weight="0.3" />&ndash;&gt;-->
+                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="4dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@color/tabGrey">&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_margin="10dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Scan Post-Text"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textAllCaps="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/zxing_status_text"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textStyle="bold" />&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:weightSum="1"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:orientation="horizontal">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_weight="0.7"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:text="Text to be inserted after scanned tag ID. Use [n] or [t] for new line or tab character."&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_margin="10dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textColor="@color/zxing_status_text"/>&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<Spinner&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/spinner4"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_margin="10dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_weight="0.3" />&ndash;&gt;-->
+                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+        <!--</LinearLayout>-->
+
+    <!--</ScrollView>-->
+
+
+
+</FrameLayout>

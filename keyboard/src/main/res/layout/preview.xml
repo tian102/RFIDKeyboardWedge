@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/buttonGrey"
+    android:textColor="@color/zxing_status_text"
+    android:gravity="center"
+    android:textSize="30sp"
+    android:textStyle="normal">
+
+</TextView>

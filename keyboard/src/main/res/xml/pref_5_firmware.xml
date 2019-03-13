@@ -1,0 +1,25 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Firmware">
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/upgradeType"
+            android:entryValues="@array/upgradeTypeValues"
+            android:key="list_upgradeType"
+            android:negativeButtonText="Cancel"
+            android:positiveButtonText="Accept"
+            android:title="Upgrade Type" />
+
+        <EditTextPreference
+            android:key="edittext_firmwarepath"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:hint=""
+            android:title="Firmware Path"
+            android:dialogTitle="Enter firmware path"/>
+
+    </PreferenceCategory>
+    
+
+</PreferenceScreen>

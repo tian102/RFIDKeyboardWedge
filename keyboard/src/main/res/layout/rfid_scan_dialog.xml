@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headingView"
+        android:layout_alignParentTop="true">
+
+
+        <TextView
+            android:id="@+id/heading1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scan_results_heading"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/taglistView"
+        android:layout_below="@id/headingView"
+        android:layout_above="@id/scanOptions">
+
+
+        <ExpandableListView
+            android:id="@+id/expandableListView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/desk_sm_body"
+            android:childDivider="@android:color/transparent"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="0.5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:id="@+id/scanOptions"
+        android:layout_alignParentBottom="true"        >
+
+        <Button
+            android:id="@+id/dialogButton1"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/accept"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/dialogButton2"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dismiss" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Performance Tuning">
+
+
+        <EditTextPreference
+            android:key="edittext_readpower"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:hint=""
+            android:title="Read Power"
+            android:dialogTitle="Read Power: 0-30dBm"/>
+
+        <EditTextPreference
+            android:key="edittext_writepower"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:hint=""
+            android:title="Write Power"
+            android:dialogTitle="Write Power: 0-30dBm"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
