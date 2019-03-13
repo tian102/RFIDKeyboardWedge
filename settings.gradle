@@ -1,1 +1,1 @@
-include ':keyboard', ':thingmagic', ':mylibrary'
+include ':keyboard', ':thingmagic'
